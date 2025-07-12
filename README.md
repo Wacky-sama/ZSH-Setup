@@ -1,52 +1,85 @@
 # Installing Zsh and Powerlevel10k
 
-This guide provides both **manual steps** and an **automated setup script**.
+This guide provides both **manual setup steps** and an **automated installation script**.
 
 ---
 
-## ✅ Quick Install with setup.sh
+## ✅ Quick Installation Using setup.sh
 
-Instead of running all steps manually, you can use this script:
-
-### 1️⃣ Create `setup.sh`:
+If you prefer a one-command setup, simply run:
 
 ```bash
-#!/bin/bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+chmod +x setup.sh
+./setup.sh
+```
 
-set -e
+## Step 1: Update and Install Zsh
 
-echo "Updating system..."
+```bash
 sudo apt update
+sudo apt install zsh -y
+```
 
-echo "Installing Zsh and Git..."
-sudo apt install -y zsh git curl
+## Step 2: Set Zsh as Default Shell
 
-echo "Setting Zsh as the default shell for user: $USER"
+```bash
 chsh -s $(which zsh)
+```
 
-echo "Installing Oh My Zsh..."
+**Note:** You need to log out and log back in for this to take effect.
+
+## Step 3: Install Oh My Zsh
+
+```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
-echo "Installing Powerlevel10k theme..."
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
-${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+## Step 4: Install Powerlevel10k Theme
 
-echo "Installing Zsh plugins..."
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
 
-git clone https://github.com/zsh-users/zsh-autosuggestions \
-${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+### Set the theme in `.zshrc`
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting \
-${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+Edit this line:
 
-git clone https://github.com/zsh-users/zsh-history-substring-search \
-${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+```bash
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
 
-echo ""
-echo "✅ Installation completed!"
-echo "Next steps:"
-echo "1. Edit ~/.zshrc:"
-echo "   - Set ZSH_THEME=\"powerlevel10k/powerlevel10k\""
-echo "   - Set plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)"
-echo "2. Reload with: source ~/.zshrc"
-echo "3. Log out and log back in to apply default shell change."
+### Reload your Zsh configuration
+
+```bash
+source .zshrc
+```
+
+---
+
+## Optional: Install Extra Zsh Plugins
+
+For **Autosuggestions**, **Syntax Highlighting**, and **History Substring Search**, run:
+
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+```
+
+Then edit your `.zshrc`:
+
+```bash
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
+```
+
+Finally, reload again:
+
+```bash
+source .zshrc
+```
+
+---
+
+✅ You now have a fast, clean, and customized Zsh shell with Powerlevel10k and helpful plugins!
