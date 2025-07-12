@@ -1,4 +1,4 @@
-# Installing Zsh and Powerlevel10k on Ubuntu Server
+# Installing Zsh and Powerlevel10k
 
 ## Step 1: Update and Install Zsh
 
