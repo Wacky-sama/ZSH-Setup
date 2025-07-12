@@ -53,7 +53,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 ```
 
-Then edit your `~/.zshrc`:
+Then edit your `.zshrc`:
 
 ```bash
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
@@ -62,7 +62,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-s
 Finally, reload again:
 
 ```bash
-source ~/.zshrc
+source .zshrc
 ```
 
 ---
