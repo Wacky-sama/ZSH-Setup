@@ -9,8 +9,8 @@ This guide provides both **manual setup steps** and an **automated installation 
 If you prefer a one-command setup, simply run:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Wacky-sama/ZSH-Setup.git
+cd ZSH-Setup
 chmod +x setup.sh
 ./setup.sh
 ```
