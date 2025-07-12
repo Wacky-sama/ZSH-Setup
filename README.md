@@ -82,4 +82,4 @@ source .zshrc
 
 ---
 
-✅ You now have a fast, clean, and customized Zsh shell with Powerlevel10k and helpful plugins!
+You now have a fast, clean, and customized Zsh shell with Powerlevel10k and helpful plugins!
