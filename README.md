@@ -4,7 +4,25 @@ This guide provides both **manual setup steps** and an **automated installation 
 
 ---
 
+## ✅ Compatibility Notes
+
+This setup has been tested on:
+
+- ✅ **Ubuntu / Debian**
+- ✅ **Fedora / CentOS / AlmaLinux**
+- ✅ **Arch / Manjaro**
+- ✅ **WSL (Windows Subsystem for Linux)**
+
+> **Note:**  
+> - Requires Zsh, Git, and Curl installed.  
+> - Powerlevel10k visuals (icons and fonts) depend on your terminal supporting [Nerd Fonts](https://github.com/romkatv/powerlevel10k#manual-font-installation).  
+> - On minimal or embedded Linux distributions (e.g., Alpine), extra setup may be required.
+
+---
+
 ## ✅ Quick Installation Using setup.sh
+
+The `setup.sh` file is already included in this repository.
 
 If you prefer a one-command setup, simply run:
 
@@ -14,6 +32,8 @@ cd ZSH-Setup
 chmod +x setup.sh
 ./setup.sh
 ```
+
+---
 
 ## Step 1: Update and Install Zsh
 
@@ -28,7 +48,7 @@ sudo apt install zsh -y
 chsh -s $(which zsh)
 ```
 
-**Note:** You need to log out and log back in for this to take effect.
+> **Note:** You need to log out and log back in for this to take effect.
 
 ## Step 3: Install Oh My Zsh
 
@@ -39,18 +59,19 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## Step 4: Install Powerlevel10k Theme
 
 ```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
+${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-### Set the theme in `.zshrc`
+### Set the Theme in `.zshrc`
 
-Edit this line and remove or comment out robbyrussel:
+Edit this line and remove or comment out `robbyrussell`:
 
 ```bash
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
-### Reload your Zsh configuration
+### Reload Your Zsh Configuration
 
 ```bash
 source .zshrc
@@ -82,4 +103,4 @@ source .zshrc
 
 ---
 
-You now have a fast, clean, and customized Zsh shell with Powerlevel10k and helpful plugins!
+✅ You now have a fast, clean, and customized Zsh shell with Powerlevel10k and helpful plugins!
