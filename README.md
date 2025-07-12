@@ -6,9 +6,8 @@
 sudo apt update
 sudo apt install zsh -y
 
-## Step 2: Set Zsh as Default Shell
+Step 2: Set Zsh as Default Shell
 
-```bash
 chsh -s $(which zsh)
 
 Note: You need to log out and log back in for this to take effect.
