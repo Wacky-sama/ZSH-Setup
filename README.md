@@ -44,7 +44,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 ### Set the theme in `.zshrc`
 
-Edit this line:
+Edit this line and remove or comment out robbyrussel:
 
 ```bash
 ZSH_THEME="powerlevel10k/powerlevel10k"
