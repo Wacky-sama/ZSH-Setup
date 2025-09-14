@@ -77,6 +77,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 source .zshrc
 ```
 
+## Step 5: Install Nerd Fonts (MesloLGS)
+```bash
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip
+unzip Meslo.zip
+fc-cache -fv
+```
+After installation, set your terminal’s font to MesloLGS NF.
+
 ---
 
 ## Optional: Install Extra Zsh Plugins
@@ -103,4 +113,4 @@ source .zshrc
 
 ---
 
-✅ You now have a fast, clean, and customized Zsh shell with Powerlevel10k and helpful plugins!
+You now have a fast, clean, and customized Zsh shell with Powerlevel10k and helpful plugins!
