@@ -4,14 +4,14 @@ This guide provides both **manual setup steps** and an **automated installation 
 
 ---
 
-## ✅ Compatibility Notes
+## Compatibility Notes
 
 This setup has been tested on:
 
-- ✅ **Ubuntu / Debian**
-- ✅ **Fedora / CentOS / AlmaLinux**
-- ✅ **Arch / Manjaro**
-- ✅ **WSL (Windows Subsystem for Linux)**
+- **Ubuntu / Debian**
+- **Fedora / CentOS / AlmaLinux**
+- **Arch / Manjaro**
+- **WSL (Windows Subsystem for Linux)**
 
 > **Note:**  
 > - Requires Zsh, Git, and Curl installed.  
@@ -20,7 +20,7 @@ This setup has been tested on:
 
 ---
 
-## ✅ Quick Installation Using setup.sh
+## Quick Installation Using setup.sh
 
 The `setup.sh` file is already included in this repository.
 
