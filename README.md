@@ -15,7 +15,7 @@ This setup has been tested on:
 
 > **Note:**  
 > - Requires Zsh, Git, and Curl installed.  
-> - Powerlevel10k visuals (icons and fonts) depend on your terminal supporting [Nerd Fonts](https://github.com/romkatv/powerlevel10k#manual-font-installation).  
+> - Powerlevel10k visuals (icons and fonts) depend on your terminal supporting [Nerd Fonts](https://www.nerdfonts.com/font-downloads).  
 > - On minimal or embedded Linux distributions (e.g., Alpine), extra setup may be required.
 
 ---
