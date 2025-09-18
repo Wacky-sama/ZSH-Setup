@@ -9,9 +9,6 @@ This guide provides both **manual setup steps** and an **automated installation 
 This setup has been tested on:
 
 - **Ubuntu / Debian**
-- **Fedora / CentOS / AlmaLinux**
-- **Arch / Manjaro**
-- **WSL (Windows Subsystem for Linux)**
 
 > **Note:**  
 > - Requires Zsh, Git, and Curl installed.  
@@ -79,8 +76,7 @@ source .zshrc
 
 ## Step 5: Install Nerd Fonts (MesloLGS)
 ```bash
-mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts
+cd /usr/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip
 unzip Meslo.zip
 fc-cache -fv

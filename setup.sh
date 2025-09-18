@@ -66,8 +66,7 @@ else
 fi
 
 echo "Installing Nerd Fonts (MesloLGS NF)..."
-mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts
+cd /usr/share/fonts
 if [ ! -f "Meslo.zip" ]; then
   wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip
   unzip -o Meslo.zip
