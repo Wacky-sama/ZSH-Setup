@@ -85,8 +85,9 @@ After installation, set your terminal’s font to MesloLGS NF.
 
 ---
 
-## Optional: Install Extra Zsh Plugins
+## Optional: Install Extra Zsh Plugins and Configurations
 
+### Zsh Plugins
 For **Autosuggestions**, **Syntax Highlighting**, and **History Substring Search**, run:
 
 ```bash
@@ -99,6 +100,25 @@ Then edit your `.zshrc`:
 
 ```bash
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
+```
+
+### Configurations
+Add this to your current **.zshrc** file after source **$ZSH/oh-my-zsh.sh**:
+```bash
+# Restore your history configuration 
+HISTFILE=~/.histfile                # Use your existing history file
+HISTSIZE=1000000                    # 1M commands in memory  
+SAVEHIST=1000000                    # 1M commands saved to file
+
+# Enhanced options for better experience
+setopt HIST_IGNORE_DUPS            # Don't save duplicate commands consecutively
+setopt HIST_IGNORE_ALL_DUPS        # Remove older duplicate entries
+setopt HIST_IGNORE_SPACE           # Don't save commands starting with space  
+setopt HIST_REDUCE_BLANKS          # Remove extra whitespace
+setopt SHARE_HISTORY               # Share history between sessions
+setopt INC_APPEND_HISTORY          # Write commands immediately
+setopt HIST_FIND_NO_DUPS           # Don't show duplicates in search
+setopt EXTENDED_HISTORY            # Save timestamps with commands
 ```
 
 Finally, reload again:
