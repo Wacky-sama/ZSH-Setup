@@ -75,6 +75,9 @@ else
   echo "Meslo Nerd Font already downloaded."
 fi
 
+echo "Need to restart your terminal to apply changes."
+source $HOME/.zshrc
+
 echo ""
 echo "Installation completed!"
 echo "--------------------------------------------------"
