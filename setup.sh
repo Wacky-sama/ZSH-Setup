@@ -66,11 +66,12 @@ else
 fi
 
 echo "Installing Nerd Fonts (MesloLGS NF)..."
-cd /usr/share/fonts
+sudo mkdir -p /usr/share/fonts/meslo
+cd /usr/share/fonts/meslo
 if [ ! -f "Meslo.zip" ]; then
-  wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip
-  unzip -o Meslo.zip
-  fc-cache -fv
+  sudo wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip
+  sudo unzip -o Meslo.zip
+  sudo fc-cache -fv
 else
   echo "Meslo Nerd Font already downloaded."
 fi
