@@ -76,7 +76,7 @@ else
 fi
 
 echo "Need to restart your terminal to apply changes."
-source $HOME/.zshrc
+source "$HOME/.zshrc"
 
 echo ""
 echo "Installation completed!"
