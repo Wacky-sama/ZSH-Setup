@@ -30,7 +30,7 @@ echo "Removing Nerd Fonts (MesloLGS NF)..."
 cd /usr/share/fonts || exit
 if [ -f "Meslo.zip" ]; then
   sudo rm -f Meslo.zip
-  sudo rm -f MesloLGS*  # remove extracted font files
+  sudo rm -f MesloLGS*
   sudo fc-cache -fv
   echo "Removed Meslo Nerd Font."
 else
